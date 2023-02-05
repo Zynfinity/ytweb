@@ -2,6 +2,7 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 const express = require('express')
 const server = express()
+var port = process.env.PORT || 3000;
 server.set("json spaces",2)
 async function y1s(type, url, quality){
     quality = quality ? quality : "360p";
@@ -61,4 +62,4 @@ server.get('/dl', async function(req, res){
     const dl = await y1s(type, url, quality)
     res.json(dl)
 })
-server.listen(8000)
+server.listen(port)
