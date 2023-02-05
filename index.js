@@ -2,7 +2,7 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 const express = require('express')
 const server = express()
-var port = process.env.PORT || 3000;
+var port = 8080;
 server.set("json spaces",2)
 async function y1s(type, url, quality){
     quality = quality ? quality : "360p";
