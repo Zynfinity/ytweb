@@ -61,4 +61,4 @@ server.get('/dl', async function(req, res){
     const dl = await y1s(type, url, quality)
     res.json(dl)
 })
-server.listen(process.env.PORT || 8080)
+server.listen(8000)
